@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "yafti"
-version = "0.8.0"
+version = "0.10.0"
 description = "Yet another first time installer"
 authors = ["Marco Ceppi <marco@ceppi.net>"]
 license = "Apache 2.0"
@@ -19,12 +19,12 @@ yafti = "yafti.__main__:app"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-pydantic = "1.10.2"  # This needs to match the minimum supported version in Fedora
+pydantic = "^2.8.2"
 pygobject = "^3.42.2"
 pyyaml = "^6.0"
 gbulb = "^0.6.4"
 rich = "^13.3.2"
-typer = ">=0.7,<0.10"
+typer = ">=0.7"
 
 [tool.poetry.plugins."yafti.plugin"]
 "yafti.plugin.flatpak" = "yafti.plugin.flatpak:Flatpak"
@@ -38,13 +38,13 @@ typer = ">=0.7,<0.10"
 "yafti.screen.consent" = "yafti.screen.consent:ConsentScreen"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.1.0"
+black = ">=23.1,<25.0"
 isort = "^5.12.0"
-pytest = "^7.2.1"
-ruff = ">=0.0.254,<0.1.5"
+pytest = ">=7.2.1,<9.0.0"
+ruff = ">=0.0.254,<0.3.5"
 coverage = "^7.2.1"
-pytest-cov = "^4.0.0"
-pytest-asyncio = ">=0.20.3,<0.22.0"
+pytest-cov = "^6.0.0"
+pytest-asyncio = ">=0.25.1,<0.26.0"
 
 [tool.isort]
 profile = "black"

@@ -1,8 +1,7 @@
 %global modname yafti
-%define version %(poetry version -s)
 
 Name:           yafti
-Version:        %{version}
+Version:        0.10.0
 Release:        0%{?dist}
 Summary:        Yet Another First Time Installer 
 License:        Apache-2.0
@@ -11,8 +10,8 @@ Source0:        https://pypi.io/packages/source/y/%{modname}/%{modname}-%{versio
 
 BuildArch:      noarch
 
+Requires: libadwaita
 BuildRequires:  pyproject-rpm-macros
-BuildRequires:  poetry
 
 %generate_buildrequires
 %pyproject_buildrequires
